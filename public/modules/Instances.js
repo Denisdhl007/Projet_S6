@@ -1,7 +1,7 @@
 import {Boss} from "./class.js";
-export let Sauron = new Boss (`Sauron`,[],[])
-export let Chronos = new Boss (`Chronos`,[],[])
-export let Lilith = new Boss (`Lilith`,[],[])
+export let Sauron = new Boss (`Sauron`,100,20)
+export let Chronos = new Boss (`Chronos`,100,20)
+export let Lilith = new Boss (`Lilith`,120,30)
 
 
 import {Héros} from "./class.js";
