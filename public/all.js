@@ -77,13 +77,19 @@ export class héros {
     }
 }
 
-let mage = new héros
-let guerrier = new héros
-let archer = new héros
+let mage = new héros(`mage`, 0, 0, 0, [7, 9, 11], 0)
+let guerrier = new héros(`guerrier`, 0, 0, 0, 0, 0)
+let archer = new héros(`archer`, 0, 0, 0, 0, 0)
+
+
 
 
 // ### - Trois héros : Un mage, Un guerrier, Un archer.
 // Avec les propriétés et actions suivantes :
+
+
+
+
 
 // ### Le guerrier
 // - Propriétés :
@@ -98,12 +104,20 @@ let archer = new héros
 //   >* attaque
 
 //   #### A Savoir sur le guerrier
-//   >* Tous les tours le guerrier gagne 1 point de rage au bout de 4 points ,le guerrier gagne 25% ( * 1.25 ) d'attaque supplémentaire durant 1 tours puis retombe à 0 de rage et perd ce bonus.
+//   >* Tous les tours le guerrier gagne 1 point de rage au bout de 4 points ,le guerrier gagne 25% ( * 1.25 ) d'attaque supplémentaire durant 1 tour puis retombe à 0 de rage et perd ce bonus.
 
-for each tour
-gagne 1 point de rage
-après 4 points,le guerrier gagne 25% (* 1.25 ) d'attaque supplémentaire durant 1 tour 
->>>>(après que les autres aient joués?)
+
+// DENIS
+// for each tour
+// gagne 1 point de rage
+// après 4 points,le guerrier gagne 25% (* 1.25 ) d'attaque supplémentaire durant 1 tour 
+// >>>> DENIS --->(après que les autres aient joués? quand un tour est il terminé?)
+// retombe à 0 de rage et perd ce bonus à la fin du tour.
+
+
+
+
+
 
 
 
@@ -122,6 +136,22 @@ après 4 points,le guerrier gagne 25% (* 1.25 ) d'attaque supplémentaire durant
 
 //   #### A Savoir sur le mage
 //   >* Les attaques du mage lui coute 2 points quand il n'a plus assez de point de mana pour attaquer,il passe 1 tour sans attaquer et il récupère 7 points de mana
+
+
+// // DENIS
+// for each???
+
+// attaque: -2 points de mana
+
+// if points de mana <= 0
+// passe un tour (c'est à dire???? quand fini le tour?)
+
+// après un tour
+// + 7 points de mana
+
+
+
+
 
 // ### L'archer
 // - Propriétés :
