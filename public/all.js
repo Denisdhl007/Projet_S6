@@ -26,8 +26,6 @@
 
 
 
-
-
 ////////////////////////////////////////////
 
 
@@ -62,14 +60,14 @@
 
 
 ////////////////////////////////////////////
-
-
-export class mage {
-    constructor(nom,nbPtsVie,nbPtsAttaques){
+export class héros {
+    constructor(nom,nbPtsVie,nbPtsAttaques,nbPtRage,nbPtMana,nbFleche){
         this.nom = nom;
         this.nbPtsVie = nbPtsVie;
         this.nbPtsAttaques = nbPtsAttaques;
         this.nbPtRage = nbPtRage;
+        this.nbPtMana = nbPtMana;
+        this.nbFleche = nbFleche;
     }
     defense(){
 
@@ -79,26 +77,9 @@ export class mage {
     }
 }
 
-
-export class guerrier {
-    constructor(nom,nbPtsVie,nbPtsAttaques,nbPtRage){
-        this.nom = nom;
-        this.nbPtsVie = nbPtsVie;
-        this.nbPtsAttaques = nbPtsAttaques;
-        this.nbPtRage = nbPtRage;
-    }
-}
-
-
-
-export class archer {
-    constructor(nom,nbPtsVie,nbPtsAttaques){
-        this.nom = nom;
-        this.nbPtsVie = nbPtsVie;
-        this.nbPtsAttaques = nbPtsAttaques;
-        this.nbPtRage = nbPtRage;
-    }
-}
+let mage = new héros
+let guerrier = new héros
+let archer = new héros
 
 
 // ### - Trois héros : Un mage, Un guerrier, Un archer.
