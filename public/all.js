@@ -198,7 +198,22 @@
 
 // >* Chaque tour les trois personnages attaque une fois le boss.
 
+mage
+guerrier
+archer
+
+attaque Boss
+
 // >* Chaque tour le boss attaque au hasard un des personnages
+
+Boss attaque au hasard 
+
+mage
+guerrie
+archer
+
+
+
 
 
 // jeu de base

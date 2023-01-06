@@ -1,4 +1,4 @@
-export class Boss extends Héros {
+export class Boss {
     constructor(nom,nbPtsVie,nbPtsAttaques){
         this.nom = nom;
         this.nbPtsVie = nbPtsVie;
