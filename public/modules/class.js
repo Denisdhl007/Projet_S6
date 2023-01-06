@@ -4,10 +4,32 @@ export class Boss {
         this.nbPtsVie = nbPtsVie;
         this.nbPtsAttaques = nbPtsAttaques;
     }
-    question(){
-
+    Duel(Héros, Enigme){
+        if (this.vie <= (this.vie/20)*100){
+            let i = 0;
+        
+            do {
+                i++;
+        
+                Enigme.enigmeQ();
+        
+            } while (i = 7 || ask == enigmeArray[rand].enigmeA);
+        
+            switch (true){
+                case i <= 2:
+                    this.vie = 0;
+                    console.log(`${Héros.nom} a vaincu ${this.nom}`);
+                    break;
+        
+                case i >= 3:
+                    perso.vie = 0;
+                    console.log(`${Héros.nom} n'a plus que ${Héros.vie} points de vie, ${Héros.nom} est mort.`);
+                    break;
+            }
+        }
     }
 }
+
 
 export class Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,nbPtRage,nbPtMana,nbFleche){
