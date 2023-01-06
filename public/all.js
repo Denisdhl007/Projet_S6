@@ -221,29 +221,33 @@
 
 
 
-
-
-
+// import Boss
 import {Boss} from "./modules/class.js";
+import {Sauron} from "./modules/Instances.js";
+import {Chronos} from "./modules/Instances.js";
+import {Lilith} from "./modules/Instances.js";
 
-import {Sauron} from "./modules/Instances?js";
-import {Chronos} from "./modules/Instances?js";
-import {Lilith} from "./modules/Instances?js";
+// import Héro
+import {Héros} from "./modules/Instances.js";
+import {mage} from  "./modules/Instances.js";
+import {guerrier} from "./modules/Instances.js";
+import {archer} from "./modules/Instances.js";
 
-
-import {Héros} from "./modules/Instances?js";
-
-
-
-
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
-import {} from from "./modules/Instances?js";
+import {ChoixHeros} from "./modules/Instances.js";
+import {index} from "./modules/Instances.js";
+import {chosenHero} from "./modules/Instances.js";
+console.log(chosenHero);
 
 
+// import Enigme
+import {Enigme} from "./modules/Instances.js";
+import {enigme_a} from "./modules/Instances.js";
+import {enigme_b} from "./modules/Instances.js";
+import {enigme_c} from "./modules/Instances.js";
+import {enigme_d} from "./modules/Instances.js";
+import {enigme_e} from "./modules/Instances.js";
+import {enigme_f} from "./modules/Instances.js";
+import {enigme_g} from "./modules/Instances.js";
+
+
+// import {} from "./modules/Instances.js";
