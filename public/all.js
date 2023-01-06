@@ -123,7 +123,6 @@ let archer = new héros
 //   >* points d'attaque
 //   >* nombre de flêches : chiffre qui sera aléatoirement imposé entre  7, 8 , 9 ,10 ,11.
 
-
 // - Actions :  (methode?)
 //   >* defense
 //   >* attaque
@@ -138,6 +137,10 @@ let archer = new héros
 
 //   #### Attaque
 //   >* Augmente de deux cinquième ( * 1.4 ) ses dégats d'attaque mais diminue d'un quart ses points de vie ( * 0.75 )
+
+
+
+
 
 
 // ## A Savoir en général :
