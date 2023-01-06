@@ -100,6 +100,13 @@ let archer = new héros
 //   #### A Savoir sur le guerrier
 //   >* Tous les tours le guerrier gagne 1 point de rage au bout de 4 points ,le guerrier gagne 25% ( * 1.25 ) d'attaque supplémentaire durant 1 tours puis retombe à 0 de rage et perd ce bonus.
 
+for each tour
+gagne 1 point de rage
+après 4 points,le guerrier gagne 25% (* 1.25 ) d'attaque supplémentaire durant 1 tour 
+>>>>(après que les autres aient joués?)
+
+
+
 // ### Le mage
 // - Propriétés :
 //   >* nom
