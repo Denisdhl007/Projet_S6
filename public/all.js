@@ -60,34 +60,12 @@
 
 
 ////////////////////////////////////////////
-export class héros {
-    constructor(nom,nbPtsVie,nbPtsAttaques,nbPtRage,nbPtMana,nbFleche){
-        this.nom = nom;
-        this.nbPtsVie = nbPtsVie;
-        this.nbPtsAttaques = nbPtsAttaques;
-        this.nbPtRage = nbPtRage;
-        this.nbPtMana = nbPtMana;
-        this.nbFleche = nbFleche;
-    }
-    defense(){
-
-    }
-    attaque(){
-
-    }
-}
-
-let mage = new héros(`mage`, 0, 0, 0, [7, 9, 11], 0)
-let guerrier = new héros(`guerrier`, 0, 0, 0, 0, 0)
-let archer = new héros(`archer`, 0, 0, 0, 0, 0)
 
 
 
 
 // ### - Trois héros : Un mage, Un guerrier, Un archer.
 // Avec les propriétés et actions suivantes :
-
-
 
 
 
@@ -138,7 +116,7 @@ let archer = new héros(`archer`, 0, 0, 0, 0, 0)
 //   >* Les attaques du mage lui coute 2 points quand il n'a plus assez de point de mana pour attaquer,il passe 1 tour sans attaquer et il récupère 7 points de mana
 
 
-// // DENIS
+// NOTES DENIS
 // for each???
 
 // attaque: -2 points de mana
@@ -167,6 +145,30 @@ let archer = new héros(`archer`, 0, 0, 0, 0, 0)
 //   #### A Savoir sur l'archer
 //   >* les attaques de l'archer consomme deux flèches par tour et récupère une flèche chaque tour.Quand il n'a plus de flèches il passe un tour et récupère 6 flèches.
 
+
+// NOTES DENIS
+// for each
+// attaquer = 2 flèches (par tour)
+// + 1 flèche par tour
+// if flèche <=0
+// il passe un tour et récupère 6 flèches.
+
+//   #### Attaque
+//   >* Augmente de deux cinquième ( * 1.4 ) ses dégats d'attaque mais diminue d'un quart ses points de vie ( * 0.75 )
+
+// un tour = quand les héors ont tous joués?
+// ils jouent l'un après l'autre.
+
+
+
+
+// NOTES DENIS
+// for each Defense :
+//   >* Diminue de moitié( * 0.5 ) ses dégats d'attaque mais augmente de deux fois et demi ses points de vie ( * 2.5 ).
+//   >* Augmente de deux les chances d'être attaqué par le boss
+
+
+
 // ### Les actions :  (methode?)
 //   #### Defense :
 //   >* Diminue de moitié( * 0.5 ) ses dégats d'attaque mais augmente de deux fois et demi ses points de vie ( * 2.5 ).
@@ -183,6 +185,9 @@ let archer = new héros(`archer`, 0, 0, 0, 0, 0)
 // ## A Savoir en général :
 // >* Un boss est choisi aléatoirement parmis les trois, c'est vous qui aurez au préalable choisis ses caractéristiques
 
+
+
+
 // >* Vous attribuez des valeurs aux propriétés des boss.
 
 // >* L'utilisateur choisi le nom de chaque héros
@@ -196,10 +201,49 @@ let archer = new héros(`archer`, 0, 0, 0, 0, 0)
 // >* Chaque tour le boss attaque au hasard un des personnages
 
 
+// jeu de base
+
+
+// while
+// boss attack
+
+// autres
+
+
+
+
+
+
 // ## Bonus :
 // ... (2 lines left)
 
-import {boss} from "./modules/class.js";
+
+
+
+
+
+
+
+import {Boss} from "./modules/class.js";
+
 import {Sauron} from "./modules/Instances?js";
 import {Chronos} from "./modules/Instances?js";
 import {Lilith} from "./modules/Instances?js";
+
+
+import {Héros} from "./modules/Instances?js";
+
+
+
+
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+import {} from from "./modules/Instances?js";
+
+
