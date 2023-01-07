@@ -34,23 +34,6 @@ export class Boss {
 
 /* */
 
-// export class Héros {
-//     constructor(nom,nbPtsVie,nbPtsAttaques,nbPtRage,nbPtMana,nbFleche){
-//         this.nom = nom;
-//         this.nbPtsVie = nbPtsVie;
-//         this.nbPtsAttaques = nbPtsAttaques;
-//         this.nbPtRage = nbPtRage;
-//         this.nbPtMana = nbPtMana;
-//         this.nbFleche = nbFleche;
-//     }
-//     defense(){
-//     }
-//     attaque(){
-//     }
-// }
-
-
-
 class Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         this.nom = nom;
@@ -60,9 +43,9 @@ class Héros {
         this.poste = poste;
     }
 }
-export let herosArray = [Guerrier,Mage,Archer];
+export let HérosArray = [Guerrier,Mage,Archer];
 
-class Guerrier extends Hero {
+class Guerrier extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbPtRage = 0;
@@ -78,7 +61,7 @@ class Guerrier extends Hero {
 }
 
 
-class Archer extends Hero{
+class Archer extends Héros{
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbFleches = 0;
@@ -94,11 +77,10 @@ class Archer extends Hero{
         }
     }
 }
-
 export let nbFlechesArray = [7,8,9,10,11];
 
 
-class Mage extends Hero {
+class Mage extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbMana = 0;
@@ -113,18 +95,10 @@ class Mage extends Hero {
         }
     }
 }
-
 export let nbManaArray = [7,9,11];
 
 
-
-
-
 /* */
-
-
-
-
 
 export class Enigme {
     constructor(enigmeQ, enigmeA){
