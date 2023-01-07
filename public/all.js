@@ -198,25 +198,17 @@
 
 // >* Chaque tour les trois personnages attaque une fois le boss.
 
-mage
-guerrier
-archer
-
-attaque Boss
-
 // >* Chaque tour le boss attaque au hasard un des personnages
 
-Boss attaque au hasard 
 
-mage
-guerrie
-archer
+// 1 TOUR
 
 
+// 1. mage attaque Boss
+// 2. guerrier attaque Boss
+// 3. archer attaque Boss
+// 4. Boss attaque au hasard soit mage soit guerrier soit archer
 
-
-
-// jeu de base
 
 
 // while
@@ -237,7 +229,7 @@ archer
 
 
 // import Boss
-import {Boss} from "./modules/class.js";
+import {Boss} from "./modules//Instances.js";
 import {Sauron} from "./modules/Instances.js";
 import {Chronos} from "./modules/Instances.js";
 import {Lilith} from "./modules/Instances.js";
@@ -247,11 +239,14 @@ import {Héros} from "./modules/Instances.js";
 import {mage} from  "./modules/Instances.js";
 import {guerrier} from "./modules/Instances.js";
 import {archer} from "./modules/Instances.js";
+import {nbFlechesArray, herosArray, nbManaArray} from './modules/Instances.js'
+
 
 import {ChoixHeros} from "./modules/Instances.js";
 import {index} from "./modules/Instances.js";
 import {chosenHero} from "./modules/Instances.js";
 console.log(chosenHero);
+
 
 
 // import Enigme
@@ -266,3 +261,4 @@ import {enigme_g} from "./modules/Instances.js";
 
 
 // import {} from "./modules/Instances.js";
+
