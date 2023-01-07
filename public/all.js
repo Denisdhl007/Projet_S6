@@ -236,10 +236,17 @@ import {Lilith} from "./modules/Instances.js";
 
 // import Héro
 import {Héros} from "./modules/Instances.js";
-import {mage} from  "./modules/Instances.js";
-import {guerrier} from "./modules/Instances.js";
-import {archer} from "./modules/Instances.js";
-import {nbFlechesArray, herosArray, nbManaArray} from './modules/Instances.js'
+import {Mage} from  "./modules/Instances.js";
+import {Guerrier} from "./modules/Instances.js";
+import {Archer} from "./modules/Instances.js";
+import {herosArray} from "./modules/Instances.js";
+import {nbFlechesArray } from "./modules/Instances.js";
+import {nbManaArray} from "./modules/Instances.js";
+
+
+
+
+
 
 
 import {ChoixHeros} from "./modules/Instances.js";

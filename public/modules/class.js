@@ -60,7 +60,7 @@ class Héros {
         this.poste = poste;
     }
 }
-
+export let herosArray = [Guerrier,Mage,Archer];
 
 class Guerrier extends Hero {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
