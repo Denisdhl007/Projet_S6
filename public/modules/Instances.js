@@ -3,6 +3,7 @@ import {Boss} from "./class.js";
 export let Sauron = new Boss (`Sauron`,100,20);
 export let Chronos = new Boss (`Chronos`,100,20);
 export let Lilith = new Boss (`Lilith`,120,30);
+export let BossTab = [Sauron,Chronos,Lilith];
 console.log(Sauron);
 console.log(Chronos);
 console.log(Lilith);
@@ -12,6 +13,7 @@ import {Héros} from "./class.js";
 export let Guerrier = new Héros (`Guerrier`, 100, 100);
 export let Mage = new Héros (`Mage`, 100, 100,);
 export let Archer = new Héros (`Archer`, 100, 100,);
+export let HerosTab = [Guerrier,Mage,Archer]
 console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);

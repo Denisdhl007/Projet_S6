@@ -1,13 +1,10 @@
 // import Boss
 import {Boss} from "./modules/class.js";
-// import {BossArray} from "./modules/class.js";
-import {Sauron} from "./modules/instances.js";
-import {Chronos} from "./modules/instances.js";
-import {Lilith} from "./modules/instances.js";
+import {BossTab, Sauron, Chronos, Lilith} from "./modules/instances.js";
 
 // import Héro
 // import {Héros} from "./modules/instances.js";
-import {HérosArray} from "./modules/class.js";
+// import {HérosArray} from "./modules/class.js";
 import {Mage} from  "./modules/instances.js";
 import {Guerrier} from "./modules/instances.js";
 import {Archer} from "./modules/instances.js";
@@ -32,18 +29,8 @@ import {enigme_g} from "./modules/instances.js";
 
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 
-/*
-alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
-let ChoixBoss = [Sauron,Chronos,Lilith];
-let index = Math.floor(Math.random() * ChoixBoss.length);
-let chosenBoss = ChoixBoss[index];
-console.log(chosenBoss);
-alert(`le Boss est ${chosenBoss.nom}`);
-*/
-
-
 //Nommer les héros
-alert(`Un guerrier, un mage et un archer vont se battre contre le Boss : ${chosenBoss.nom}. Vous allez maintenant nommer les trois héros`);
+alert(`Un guerrier, un mage et un archer vont se battre contre le Boss. Vous allez maintenant nommer les trois héros`);
 
 Guerrier.nom = prompt("Quel est le nom de ton guerrier ?");
 Mage.nom = prompt("Quel est le nom de ton mage ?");
@@ -88,10 +75,10 @@ alert (`Passons à la suite`);
 
 
 //Définir les points d'attaque pour chacun des Héros
-let Attack = 500;
+let Attack = 200;
 
 //Guerrier
-Guerrier.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre guerrier (entre 0 et 500?)`);
+Guerrier.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre guerrier?`);
 while (Attack<=Guerrier.nbPtsAttaques && Guerrier.nbPtsAttaques>0) {
     alert(`Veuillez ré-attribuer un nombre entre 0 et ${Attack}`);
     Guerrier.nbPtsAttaques = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
@@ -118,34 +105,31 @@ console.log(Mage);
 console.log(Archer);
 alert (`Passons à la suite`);
 
-
 // choix de boss
-alert('Choix de boss');
-let choixBoss2=prompt('Pour Sauron - écrire: A, pour Chronos - écrire: B, pour Lilith - écrire: C');
-switch(choixBoss2){
-    case 1 :
-        Sauron;
-        alert('Vous avez choisi: ${Sauron.nom}');
-        break;
-    case 2 :
-        Chronos;
-        alert('Vous avez choisi: ${Chronos.nom}');
-        break;
-    case 3 :
-        Lilith;
-        alert('Vous avez choisi: ${Lilith.nom}');
-        break;
-    default:
-        alert('Mauvaise réponse, Veuillez réessayer');
-        break;
-};
+alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
+let index = Math.floor(Math.random() * BossTab.length);
+let chosenBoss = BossTab[index];
+console.log(chosenBoss);
+alert(`le Boss est ${chosenBoss.nom}`);
 
+//début d'une partie
+while(chosenBoss.nbPtsVie>0 || Guerrier.nbPtsVie>0 && Mage.nbPtsVie>0 && Archer.nbPtsVie>0 ){}
+    
 
-//début du jeux
-while(choixBoss2.pointsDeVie<=0){
-    Guerrier.attaque(choixBoss2);
-    Mage.attaque(choixBoss2);
-    Archer.attaque(choixBoss2);
-
-    choixBoss2.attaque()
+if (Guerrier.nbPtsVie == 0 && Mage.nbPtsVie == 0 && Archer.nbPtsVie == 0){
+    alert (`Vous avez perdu contre ${chosenBoss.nom}`);
+}else if (chosenBoss.nbPtsVie == 0){
+    alert (`Vous avez gangé contre ${chosenBoss.nom}`);
 }
+
+
+
+
+
+//     Guerrier.attaque(chosenBoss);
+//     Mage.attaque(chosenBoss);
+//     Archer.attaque(chosenBoss);
+
+//     chosenBoss.attaque()
+// }
+

@@ -30,7 +30,7 @@ export class Boss {
         }
     }
     attaque(){
-        let tab = [guerrier, mage, archer];
+        let tab = [Guerrier, Mage, Archer];
         let randomItem = tab[Math.floor(Math.random() * tab.length)];
         console.log(`${this.nom} attaque ${randomItem.nom} et inflige ${this.pointsDAttaque} points de dégâts`);
         randomItem.pointsDeVie -= this.pointsDAttaque;
@@ -58,8 +58,8 @@ export class Guerrier extends Héros {
     }
     defense() {
         console.log(`${this.nom} se met en défense et il augmente ses points de vie de 250%`);
-        this.pointsDeVie = 2.5;
-        this.pointsDAttaque= 0.5;
+        this.nbPtsVie = 2.5;
+        this.nbPtsAttaques= 0.5;
     }
     attack() {
         if (this.arrows < 2) {
