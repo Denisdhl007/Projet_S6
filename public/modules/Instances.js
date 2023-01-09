@@ -1,21 +1,31 @@
 // exports boss
 import {Boss} from "./class.js";
-export let Sauron = new Boss (`Sauron`,100,20)
-export let Chronos = new Boss (`Chronos`,100,20)
-export let Lilith = new Boss (`Lilith`,120,30)
+export let Sauron = new Boss (`Sauron`,100,20);
+export let Chronos = new Boss (`Chronos`,100,20);
+export let Lilith = new Boss (`Lilith`,120,30);
+console.log(Sauron);
+console.log(Chronos);
+console.log(Lilith);
 
-//export heros
+//export Héros
 import {Héros} from "./class.js";
-export let Guerrier = new Guerrier ("string","number","number","guerrier","string");
-export let Mage = new Mage ("string","number","number","mage","string");
-export let Archer = new Archer ("string","number","number","archer","string");
-export let HérosArray = [Guerrier,Mage,Archer];
+export let Guerrier = new Héros (`Guerrier`, 100, 100,);
+export let Mage = new Héros (`Mage`, 100, 100,);
+export let Archer = new Héros (`Archer`, 100, 100,);
+console.log(Guerrier);
+console.log(Mage);
+console.log(Archer);
 
+import {HérosArray} from "./class.js";
+
+// import let HérosArray = [Guerrier,Mage,Archer];
+
+/*
 export let ChoixHeros = [Mage, Guerrier, Archer];
 export let index = Math.floor(Math.random() * ChoixHeros.length);
 export let chosenHero = ChoixHeros[index];
 console.log(chosenHero);
-
+*/
 
 //export Enigme
 import {Enigme} from "./class.js";

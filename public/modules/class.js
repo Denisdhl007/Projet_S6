@@ -34,7 +34,7 @@ export class Boss {
 
 /* */
 
-class Héros {
+export class Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         this.nom = nom;
         this.nbPtsVie = nbPtsVie;
@@ -45,7 +45,7 @@ class Héros {
 }
 export let HérosArray = [Guerrier,Mage,Archer];
 
-class Guerrier extends Héros {
+export class Guerrier extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbPtRage = 0;
@@ -61,7 +61,7 @@ class Guerrier extends Héros {
 }
 
 
-class Archer extends Héros{
+export class Archer extends Héros{
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbFleches = 0;
@@ -80,7 +80,7 @@ class Archer extends Héros{
 export let nbFlechesArray = [7,8,9,10,11];
 
 
-class Mage extends Héros {
+export class Mage extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbMana = 0;

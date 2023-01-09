@@ -1,25 +1,27 @@
 // import Boss
-import {Boss} from "./modules//Instances.js";
+// import {Boss} from "./modules/Instances.js";
 import {Sauron} from "./modules/Instances.js";
 import {Chronos} from "./modules/Instances.js";
 import {Lilith} from "./modules/Instances.js";
 
 // import Héro
-import {Héros} from "./modules/Instances.js";
+// import {Héros} from "./modules/Instances.js";
+import {HérosArray} from "./modules/Instances.js";
 import {Mage} from  "./modules/Instances.js";
 import {Guerrier} from "./modules/Instances.js";
 import {Archer} from "./modules/Instances.js";
-import {HérosArray} from "./modules/Instances.js";
-import {nbFlechesArray } from "./modules/Instances.js";
-import {nbManaArray} from "./modules/Instances.js";
+import {nbFlechesArray } from "./modules/class.js";
+import {nbManaArray} from "./modules/class.js";
 
+/*
 import {ChoixHeros} from "./modules/Instances.js";
 import {index} from "./modules/Instances.js";
 import {chosenHero} from "./modules/Instances.js";
 console.log(chosenHero);
+*/
 
 // import Enigme
-import {Enigme} from "./modules/Instances.js";
+// import {Enigme} from "./modules/Instances.js";
 import {enigme_a} from "./modules/Instances.js";
 import {enigme_b} from "./modules/Instances.js";
 import {enigme_c} from "./modules/Instances.js";
@@ -37,7 +39,7 @@ let nbFlechesA = Math.floor(Math.random()*nbFlechesArray.length);
 let nbManaA = Math.floor(Math.random()*nbManaArray.length);
 
 let elementBoss = BossArray[BossA];
-archer.fleches = nbFlechesArray[nbFlechesAleat];
+archer.fleches = nbFlechesArray[nbFlechesA];
 mage.nbMana = nbManaArray[nbManaAleat];
 
 alert(`Bienvenue dans cette partie de Geek of Legends. Votre équipe sera composée de TROIS Héros. Un guerrier, un mage et un archer vont se battre contre un Boss: ${elementBoss.nom}. Vous allez maintenant nommer les membres de votre équipe`);
@@ -52,7 +54,7 @@ let ptsVie = 500;
 alert (`Votre Guérrier s'appelle: ${guerrier.nom}, Votre Mage s'appelle: ${mage.nom} et Votre Archer s'appelle: ${archer.nom}.  Donnez leur maintenant des points de vie.`);
 
 HérosArray.forEach(element => {
-    element.vie = prompt(`Attribuez des points de vie à votre ${element.nom},  votre ${element.poste} ? Le solde des points de vie est : ${ptVie}/1000.`);
+    element.vie = prompt(`Attribuez des points de vie à votre ${element.nom},  votre ${element.poste} ? Le solde des points de vie est : ${ptVie}/(500.`);
     ptVie -= element.vie;
 });
 
@@ -128,14 +130,11 @@ if (ptAttaque !== 0) {
 
 
 
-
 // Créer un switch entre les trois modes
 // attaque
 // defense
 // normal
 // default: comande introuvable
-
-
 
 
 
