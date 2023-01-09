@@ -16,8 +16,8 @@ console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
-import {HérosArray} from "./class.js";
 
+// import {HérosArray} from "./class.js";
 // import let HérosArray = [Guerrier,Mage,Archer];
 
 /*
@@ -26,6 +26,7 @@ export let index = Math.floor(Math.random() * ChoixHeros.length);
 export let chosenHero = ChoixHeros[index];
 console.log(chosenHero);
 */
+
 
 //export Enigme
 import {Enigme} from "./class.js";

@@ -1,15 +1,15 @@
 // import Boss
-// import {Boss} from "./modules/Instances.js";
-import {Sauron} from "./modules/Instances.js";
-import {Chronos} from "./modules/Instances.js";
-import {Lilith} from "./modules/Instances.js";
+import {Boss} from "./modules/class.js";
+import {Sauron} from "./modules/instances.js";
+import {Chronos} from "./modules/instances.js";
+import {Lilith} from "./modules/instances.js";
 
 // import Héro
 // import {Héros} from "./modules/Instances.js";
-import {HérosArray} from "./modules/Instances.js";
-import {Mage} from  "./modules/Instances.js";
-import {Guerrier} from "./modules/Instances.js";
-import {Archer} from "./modules/Instances.js";
+// import {HérosArray} from "./modules/class.js";
+import {Mage} from  "./modules/instances.js";
+import {Guerrier} from "./modules/instances.js";
+import {Archer} from "./modules/instances.js";
 import {nbFlechesArray } from "./modules/class.js";
 import {nbManaArray} from "./modules/class.js";
 
@@ -22,17 +22,22 @@ console.log(chosenHero);
 
 // import Enigme
 // import {Enigme} from "./modules/Instances.js";
-import {enigme_a} from "./modules/Instances.js";
-import {enigme_b} from "./modules/Instances.js";
-import {enigme_c} from "./modules/Instances.js";
-import {enigme_d} from "./modules/Instances.js";
-import {enigme_e} from "./modules/Instances.js";
-import {enigme_f} from "./modules/Instances.js";
-import {enigme_g} from "./modules/Instances.js";
+import {enigme_a} from "./modules/instances.js";
+import {enigme_b} from "./modules/instances.js";
+import {enigme_c} from "./modules/instances.js";
+import {enigme_d} from "./modules/instances.js";
+import {enigme_e} from "./modules/instances.js";
+import {enigme_f} from "./modules/instances.js";
+import {enigme_g} from "./modules/instances.js";
 
 // import {} from "./modules/Instances.js";
 
 //initialisation de partie
+
+alert(`Bienvenue dans cette partie de Geek of Legends. Votre équipe sera composée de TROIS Héros. Un guerrier, un mage et un archer vont se battre contre un Boss. Vous allez maintenant nommer les membres de votre équipe`);
+
+
+/*
 
 let BossA = Math.floor(Math.random()*BossArray.length);
 let nbFlechesA = Math.floor(Math.random()*nbFlechesArray.length);
@@ -146,6 +151,46 @@ if (ptAttaque !== 0) {
 // 4. Boss attaque au hasard soit mage soit guerrier soit archer
 // while
 // boss attack
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
