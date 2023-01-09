@@ -11,15 +11,9 @@ import {HérosArray} from "./modules/class.js";
 import {Mage} from  "./modules/instances.js";
 import {Guerrier} from "./modules/instances.js";
 import {Archer} from "./modules/instances.js";
-import {nbFlechesArray } from "./modules/class.js";
-import {nbManaArray} from "./modules/class.js";
+// import {nbFlechesArray } from "./modules/class.js";
+// import {nbManaArray} from "./modules/class.js";
 
-/*
-import {ChoixHeros} from "./modules/instances.js";
-import {index} from "./modules/instances.js";
-import {chosenHero} from "./modules/instances.js";
-console.log(chosenHero);
-*/
 
 // import Enigme
 // import {Enigme} from "./modules/instances.js";
@@ -36,23 +30,17 @@ import {enigme_g} from "./modules/instances.js";
 //initialisation de partie
 
 
-
-
-
-
-
-
-
-/*
-
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 
+/*
 alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
 let ChoixBoss = [Sauron,Chronos,Lilith];
 let index = Math.floor(Math.random() * ChoixBoss.length);
 let chosenBoss = ChoixBoss[index];
 console.log(chosenBoss);
 alert(`le Boss est ${chosenBoss.nom}`);
+*/
+
 
 //Nommer les héros
 alert(`Un guerrier, un mage et un archer vont se battre contre le Boss : ${chosenBoss.nom}. Vous allez maintenant nommer les trois héros`);
@@ -64,7 +52,6 @@ console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
-*/
 
 //Définir les points de vie pour chacun
 
@@ -132,21 +119,33 @@ console.log(Archer);
 alert (`Passons à la suite`);
 
 
-/*
+// choix de boss
+alert('Choix de boss');
+let choixBoss2=prompt('Pour Sauron - écrire: A, pour Chronos - écrire: B, pour Lilith - écrire: C');
+switch(choixBoss2){
+    case 1 :
+        Sauron;
+        alert('Vous avez choisi: ${Sauron.nom}');
+        break;
+    case 2 :
+        Chronos;
+        alert('Vous avez choisi: ${Chronos.nom}');
+        break;
+    case 3 :
+        Lilith;
+        alert('Vous avez choisi: ${Lilith.nom}');
+        break;
+    default:
+        alert('Mauvaise réponse, Veuillez réessayer');
+        break;
+};
 
-// Créer un switch entre les trois modes
-// attaque
-// defense
-// normal
-// default: comande introuvable
 
+//début du jeux
+while(choixBoss2.pointsDeVie<=0){
+    Guerrier.attaque(choixBoss2);
+    Mage.attaque(choixBoss2);
+    Archer.attaque(choixBoss2);
 
-
-
-// 1 TOUR
-// 1. mage attaque Boss
-// 2. guerrier attaque Boss
-// 3. archer attaque Boss
-// 4. Boss attaque au hasard soit mage soit guerrier soit archer
-// while
-// boss attack
+    choixBoss2.attaque()
+}
