@@ -30,7 +30,7 @@ export class Boss {
         }
     }
 }
-// export let BossArray = [`Sauron`,`Chronos`,`Lilith`];
+
 
 
 /* */
@@ -43,6 +43,13 @@ export class Héros {
         this.mode = mode;
         this.poste = poste;
     }
+    attaque(){
+
+    }
+    defense(){
+
+    }
+
 }
 
 export class Guerrier extends Héros {
@@ -57,6 +64,12 @@ export class Guerrier extends Héros {
             this.nbPtsAttaque = this.nbPtsAttaque*1.25;
             this.nbPtRage = 0;
         }
+    }
+    attaque(){
+
+    }
+    defense(){
+
     }
 }
 
@@ -75,6 +88,12 @@ export class Archer extends Héros{
             this.nbFleches += 6;
         }
     }
+    attaque(){
+
+    }
+    defense(){
+
+    }
 }
 export let nbFlechesArray = [7,8,9,10,11];
 
@@ -92,6 +111,12 @@ export class Mage extends Héros {
             herosArray.splice(herosArray.indexOf(this));
             this.nbMana += 7;
         }
+    }
+    attaque(){
+
+    }
+    defense(){
+
     }
 }
 export let nbManaArray = [7,9,11];

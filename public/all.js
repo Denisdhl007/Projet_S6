@@ -36,6 +36,15 @@ import {enigme_g} from "./modules/instances.js";
 //initialisation de partie
 
 
+
+
+
+
+
+
+
+
+
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 
 alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
@@ -45,121 +54,114 @@ let chosenBoss = ChoixBoss[index];
 console.log(chosenBoss);
 alert(`le Boss est ${chosenBoss.nom}`);
 
+//Nommer les héros
 alert(`Un guerrier, un mage et un archer vont se battre contre le Boss : ${chosenBoss.nom}. Vous allez maintenant nommer les trois héros`);
-
 
 Guerrier.nom = prompt("Quel est le nom de ton guerrier ?");
 Mage.nom = prompt("Quel est le nom de ton mage ?");
 Archer.nom = prompt("Quel est le nom de ton archer?");
-
 console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
 
-/*
-
-let BossA = Math.floor(Math.random()*BossArray.length);
-let nbFlechesA = Math.floor(Math.random()*nbFlechesArray.length);
-let nbManaA = Math.floor(Math.random()*nbManaArray.length);
-
-let elementBoss = BossArray[BossA];
-archer.fleches = nbFlechesArray[nbFlechesA];
-mage.nbMana = nbManaArray[nbManaAleat];
-
-alert(`Bienvenue dans cette partie de Geek of Legends. Votre équipe sera composée de TROIS Héros. Un guerrier, un mage et un archer vont se battre contre un Boss: ${elementBoss.nom}. Vous allez maintenant nommer les membres de votre équipe`);
-
-HérosArray.forEach(element =>
-    element.nom = prompt(`Quel sera le nom de ${element.poste}?`)
-);
-
-
+//Définir les points de vie pour chacun
 
 let ptsVie = 500;
 
-alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points de vie.`);
+alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points d'attaque.`);
 
 let ptsvie1 = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
-if(ptsVie<=ptsvie1){
+if(ptsVie>=ptsvie1){
     Guerrier.nbPtsVie==ptsvie1;
     ptsVie-=ptsvie1;
-    alert("Il vous reste ${ptsVie}");
+    alert(`Il vous reste ${ptsVie}`);
 }else{
-    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
 };
 
 let ptsvie2 = prompt("Combien souhaitez vous attribuer à votre mage ?");
-if(ptsVie<=ptsvie2){
+if(ptsVie>=ptsvie2){
     Mage.nbPtsVie==ptsvie2;
     ptsVie-=ptsvie2;
-    alert("Il vous reste ${ptsVie}");
+    alert(`Il vous reste ${ptsVie}`);
 }else{
-    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
 };
 let ptsvie3 = prompt("Combien souhaitez vous attribuer à votre archer ?");
 
-if(ptsVie<=ptsvie3){
+if(ptsVie>=ptsvie3){
     Archer.nbPtsVie==ptsvie3;
     ptsVie-=ptsvie3;
-    alert("Il vous reste ${ptsVie}");
+    alert(`Il vous reste ${ptsVie}`);
 }else{
-    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
+};
+alert (`Passons à la suite`);
+
+
+
+
+
+//Définir les points d'attaque
+
+
+//Définir les points de vie pour chacun
+
+let Attack = 500;
+
+alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points d'attaque'.`);
+
+let Attack1 = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+if(Attack>=Attack1){
+    Guerrier.nbPtsVie==ptsvie1;
+    ptsVie-=ptsvie1;
+    alert(`Il vous reste ${ptsVie}`);
+}else{
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
 };
 
-/*
+let Attack2 = prompt("Combien souhaitez vous attribuer à votre mage ?");
+if(ptsVie>=ptsvie2){
+    Mage.nbPtsVie==ptsvie2;
+    ptsVie-=ptsvie2;
+    alert(`Il vous reste ${ptsVie}`);
+}else{
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
+};
 
-HérosArray.forEach(element => {
-    element.vie = prompt(`Attribuez des points de vie à votre Guerrier, votre Mage, votre archer.
-    
-    ${},  votre ${element.poste} ? Le solde des points de vie est : ${ptVie}/(500.`);
-    ptVie -= element.vie;
-});
 
-if (ptsVie !== 0){
-    let ajoutVie = prompt(`Ìl reste ${ptsVie} points de vie. Maintenant, à qui voulez vous donner des points de vie?`)
+let Attack3 = prompt("Combien souhaitez vous attribuer à votre archer ?");
+if(ptsVie>=ptsvie3){
+    Archer.nbPtsVie==ptsvie3;
+    ptsVie-=ptsvie3;
+    alert(`Il vous reste ${ptsVie}`);
+}else{
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
+};
+alert (`Passons à la suite`);
 
-    switch(true){
-        case(ajoutVie == "Guerrier"):
-            Guerrier.vie += ptVie;
-            break;
 
-        case(ajoutVie == "Mage"):
-            Mage.vie += ptVie;
-            break;
+// let ptAttaque = 500;
 
-        case(ajoutVie == "Archer"):
-            Archer.vie += ptVie;
-            break;
-        }
+// alert (`Distirbuez maintenant ${ptAttaque} points d'attaque`);
 
-} else {
-    alert (`Passons à la suite`);
-}
+// HérosArray.forEach(element => {
+//     element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}`);
+//     alert(`Il reste ${ptAttaque}/500`);
+//     ptAttaque -= element.attaque;
 
-*/
-
-/*
-
-let ptAttaque = 500;
-
-alert (`Distirbuez maintenant ${ptAttaque} points d'attaque`);
-
-HérosArray.forEach(element => {
-    element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}`);
-    alert(`Il reste ${ptAttaque}/500`);
-    ptAttaque -= element.attaque;
-
-    if(element.attaque !== "number"){
-        alert(`Veuillez introduire un nombre en chiffre`);
-        element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste} ?`);
-        alert(`Il reste ${ptAttaque}/500`);
+//     if(element.attaque !== "number"){
+//         alert(`Veuillez introduire un nombre en chiffre`);
+//         element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste} ?`);
+//         alert(`Il reste ${ptAttaque}/500`);
         
-    } else if (element.attaque > ptAttaque){
-        alerte(`nombre de points restants insuffisant`);
-        element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}?`);
-        alert(`Il reste ${ptAttaque}/500`);
-    }
-});
+//     } else if (element.attaque > ptAttaque){
+//         alerte(`nombre de points restants insuffisant`);
+//         element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}?`);
+//         alert(`Il reste ${ptAttaque}/500`);
+//     }
+// });
 
 
 if (ptAttaque !== 0) {
@@ -187,7 +189,6 @@ if (ptAttaque !== 0) {
 
 
 
-
 // Créer un switch entre les trois modes
 // attaque
 // defense
@@ -204,5 +205,3 @@ if (ptAttaque !== 0) {
 // 4. Boss attaque au hasard soit mage soit guerrier soit archer
 // while
 // boss attack
-
-*/
