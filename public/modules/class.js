@@ -60,7 +60,6 @@ export class Guerrier extends Héros {
     }
 }
 
-
 export class Archer extends Héros{
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
@@ -96,11 +95,7 @@ export class Mage extends Héros {
     }
 }
 export let nbManaArray = [7,9,11];
-
 export let HérosArray = [`Guerrier`,`Mage`,`Archer`];
-
-
-
 
 /* */
 

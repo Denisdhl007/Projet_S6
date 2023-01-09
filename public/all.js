@@ -35,9 +35,10 @@ import {enigme_g} from "./modules/instances.js";
 
 //initialisation de partie
 
-alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS Héros.`);
 
-alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Boss.Lilith}, ${Boss.Lilith}, ${Boss.Lilith}`);
+alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
+
+alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
 let ChoixBoss = [Sauron,Chronos,Lilith];
 let index = Math.floor(Math.random() * ChoixBoss.length);
 let chosenBoss = ChoixBoss[index];
@@ -47,24 +48,13 @@ alert(`le Boss est ${chosenBoss.nom}`);
 alert(`Un guerrier, un mage et un archer vont se battre contre le Boss : ${chosenBoss.nom}. Vous allez maintenant nommer les trois héros`);
 
 
+Guerrier.nom = prompt("Quel est le nom de ton guerrier ?");
+Mage.nom = prompt("Quel est le nom de ton mage ?");
+Archer.nom = prompt("Quel est le nom de ton archer?");
 
-// HérosArray.forEach(element =>
-//     element.nom = prompt(`Quel sera le nom de ${element.poste}?`)
-// );
-
-
-// let globalInput;
-
-// function getInput() {
-//     globalInput = prompt('Enter some data:');
-// }
-
-// getInput();
-
-// // Use the globalInput value
-// console.log(globalInput);
-// document.write(globalInput);
-
+console.log(Guerrier);
+console.log(Mage);
+console.log(Archer);
 
 
 /*
@@ -84,17 +74,44 @@ HérosArray.forEach(element =>
 );
 
 
-*/
-
-/*
-
 
 let ptsVie = 500;
 
-alert (`Votre Guérrier s'appelle: ${guerrier.nom}, Votre Mage s'appelle: ${mage.nom} et Votre Archer s'appelle: ${archer.nom}.  Donnez leur maintenant des points de vie.`);
+alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points de vie.`);
+
+let ptsvie1 = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+if(ptsVie<=ptsvie1){
+    Guerrier.nbPtsVie==ptsvie1;
+    ptsVie-=ptsvie1;
+    alert("Il vous reste ${ptsVie}");
+}else{
+    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+};
+
+let ptsvie2 = prompt("Combien souhaitez vous attribuer à votre mage ?");
+if(ptsVie<=ptsvie2){
+    Mage.nbPtsVie==ptsvie2;
+    ptsVie-=ptsvie2;
+    alert("Il vous reste ${ptsVie}");
+}else{
+    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+};
+let ptsvie3 = prompt("Combien souhaitez vous attribuer à votre archer ?");
+
+if(ptsVie<=ptsvie3){
+    Archer.nbPtsVie==ptsvie3;
+    ptsVie-=ptsvie3;
+    alert("Il vous reste ${ptsVie}");
+}else{
+    alert("Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}");
+};
+
+/*
 
 HérosArray.forEach(element => {
-    element.vie = prompt(`Attribuez des points de vie à votre ${element.nom},  votre ${element.poste} ? Le solde des points de vie est : ${ptVie}/(500.`);
+    element.vie = prompt(`Attribuez des points de vie à votre Guerrier, votre Mage, votre archer.
+    
+    ${},  votre ${element.poste} ? Le solde des points de vie est : ${ptVie}/(500.`);
     ptVie -= element.vie;
 });
 
@@ -119,8 +136,9 @@ if (ptsVie !== 0){
     alert (`Passons à la suite`);
 }
 
+*/
 
-
+/*
 
 let ptAttaque = 500;
 
