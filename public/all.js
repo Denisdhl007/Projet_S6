@@ -1,6 +1,6 @@
 // import Boss
 import {Boss} from "./modules/class.js";
-import {BossArray} from "./modules/class.js";
+// import {BossArray} from "./modules/class.js";
 import {Sauron} from "./modules/instances.js";
 import {Chronos} from "./modules/instances.js";
 import {Lilith} from "./modules/instances.js";
@@ -35,18 +35,22 @@ import {enigme_g} from "./modules/instances.js";
 
 //initialisation de partie
 
-alert(`Bienvenue dans cette partie de Geek of Legends. Votre équipe sera composée de TROIS Héros. Un guerrier, un mage et un archer vont se battre contre un Boss. Vous allez maintenant nommer les membres de votre équipe`);
+alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS Héros.`);
 
-
+alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Boss.Lilith}, ${Boss.Lilith}, ${Boss.Lilith}`);
 let ChoixBoss = [Sauron,Chronos,Lilith];
 let index = Math.floor(Math.random() * ChoixBoss.length);
 let chosenBoss = ChoixBoss[index];
 console.log(chosenBoss);
+alert(`le Boss est ${chosenBoss.nom}`);
 
-HérosArray.forEach(element =>
-    element.nom = prompt(`Quel sera le nom de ${element.poste}?`)
-);
+alert(`Un guerrier, un mage et un archer vont se battre contre le Boss : ${chosenBoss.nom}. Vous allez maintenant nommer les trois héros`);
 
+
+
+// HérosArray.forEach(element =>
+//     element.nom = prompt(`Quel sera le nom de ${element.poste}?`)
+// );
 
 
 // let globalInput;
