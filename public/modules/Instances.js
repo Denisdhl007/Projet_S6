@@ -17,17 +17,6 @@ console.log(Mage);
 console.log(Archer);
 
 
-// import {HérosArray} from "./class.js";
-// import let HérosArray = [Guerrier,Mage,Archer];
-
-/*
-export let ChoixHeros = [Mage, Guerrier, Archer];
-export let index = Math.floor(Math.random() * ChoixHeros.length);
-export let chosenHero = ChoixHeros[index];
-console.log(chosenHero);
-*/
-
-
 //export Enigme
 import {Enigme} from "./class.js";
 export let enigme_a = new Enigme(`Plus elle est grande, moins on la voit. Qui est-elle ?`,`L obscurité`);

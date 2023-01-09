@@ -30,6 +30,7 @@ export class Boss {
         }
     }
 }
+export let BossArray = [`Sauron`,`Chronos`,`Lilith`];
 
 
 /* */
@@ -95,7 +96,6 @@ export class Mage extends Héros {
     }
 }
 export let nbManaArray = [7,9,11];
-
 
 export let HérosArray = [`Guerrier`,`Mage`,`Archer`];
 
