@@ -9,7 +9,7 @@ console.log(Lilith);
 
 //export Héros
 import {Héros} from "./class.js";
-export let Guerrier = new Héros (`Guerrier`, 100, 100,);
+export let Guerrier = new Héros (`Guerrier`, 100, 100);
 export let Mage = new Héros (`Mage`, 100, 100,);
 export let Archer = new Héros (`Archer`, 100, 100,);
 console.log(Guerrier);

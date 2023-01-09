@@ -29,6 +29,12 @@ export class Boss {
             }
         }
     }
+    attaque(){
+        let tab = [guerrier, mage, archer];
+        let randomItem = tab[Math.floor(Math.random() * tab.length)];
+        console.log(`${this.nom} attaque ${randomItem.nom} et inflige ${this.pointsDAttaque} points de dégâts`);
+        randomItem.pointsDeVie -= this.pointsDAttaque;
+    }
 }
 
 

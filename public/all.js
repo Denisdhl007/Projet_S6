@@ -43,7 +43,7 @@ import {enigme_g} from "./modules/instances.js";
 
 
 
-
+/*
 
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 
@@ -64,130 +64,81 @@ console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
+*/
+
 
 //Définir les points de vie pour chacun
 
-let ptsVie = 500;
+let vie = Number(`500`);
 
-alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points d'attaque.`);
+alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}Donnez leur maintenant des points d'attaque.`);
 
-let ptsvie1 = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
-if(ptsVie>=ptsvie1){
-    Guerrier.nbPtsVie==ptsvie1;
-    ptsVie-=ptsvie1;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
+//guerrier
+Guerrier.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre guerrier (entre 0 et 500?)`);
+while (vie<=Guerrier.nbPtsVie && Guerrier.nbPtsVie>0) {
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${vie}`);
+    Guerrier.nbPtsVie = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+}
+vie-=Guerrier.nbPtsVie;
+alert(`Il vous reste ${vie}`);
+console.log(Guerrier);
 
-let ptsvie2 = prompt("Combien souhaitez vous attribuer à votre mage ?");
-if(ptsVie>=ptsvie2){
-    Mage.nbPtsVie==ptsvie2;
-    ptsVie-=ptsvie2;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
-let ptsvie3 = prompt("Combien souhaitez vous attribuer à votre archer ?");
+Mage.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
+while (vie<=Mage.nbPtsVie && Mage.nbPtsVie>0) {
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${vie}`);
+    Mage.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
+}
+vie-=Mage.nbPtsVie;
+console.log(Mage);
 
-if(ptsVie>=ptsvie3){
-    Archer.nbPtsVie==ptsvie3;
-    ptsVie-=ptsvie3;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
+
+Archer.nbPtsVie = vie;
+alert(`votre Archer a donc ${vie} point de vie`);
+
+console.log(Guerrier);
+console.log(Mage);
+console.log(Archer);
 alert (`Passons à la suite`);
 
 
 
 
-
-//Définir les points d'attaque
-
-
-//Définir les points de vie pour chacun
-
+//Définir les points d'attaque pour chacun des Héros
 let Attack = 500;
 
-alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}.  Donnez leur maintenant des points d'attaque'.`);
+//Guerrier
+Guerrier.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre guerrier (entre 0 et 500?)`);
+while (Attack<=Guerrier.nbPtsAttaques && Guerrier.nbPtsAttaques>0) {
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${Attack}`);
+    Guerrier.nbPtsAttaques = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+}
+vie-=Guerrier.nbPtsAttaques;
+alert(`Il vous reste ${Attack} points d'attaque`);
+console.log(Guerrier);
 
-let Attack1 = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
-if(Attack>=Attack1){
-    Guerrier.nbPtsVie==ptsvie1;
-    ptsVie-=ptsvie1;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
+//Mage
+Mage.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
+while (Attack<=Mage.nbPtsAttaques && Mage.nbPtsAttaques>0) {
+    alert(`Veuillez ré-attribuer un nombre entre 0 et ${Attack}`);
+    Mage.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
+}
+Attack-=Mage.nbPtsAttaques;
+console.log(Mage);
 
-let Attack2 = prompt("Combien souhaitez vous attribuer à votre mage ?");
-if(ptsVie>=ptsvie2){
-    Mage.nbPtsVie==ptsvie2;
-    ptsVie-=ptsvie2;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
+//Archer
+Archer.nbPtsAttaques = vie;
+alert(`votre Archer a donc ${Attack} points d'attaque`);
 
-
-let Attack3 = prompt("Combien souhaitez vous attribuer à votre archer ?");
-if(ptsVie>=ptsvie3){
-    Archer.nbPtsVie==ptsvie3;
-    ptsVie-=ptsvie3;
-    alert(`Il vous reste ${ptsVie}`);
-}else{
-    alert(`Veuillez ré-attribuer un nombre entre 0 et ${ptsVie}`);
-};
+console.log(Guerrier);
+console.log(Mage);
+console.log(Archer);
 alert (`Passons à la suite`);
 
 
-// let ptAttaque = 500;
-
-// alert (`Distirbuez maintenant ${ptAttaque} points d'attaque`);
-
-// HérosArray.forEach(element => {
-//     element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}`);
-//     alert(`Il reste ${ptAttaque}/500`);
-//     ptAttaque -= element.attaque;
-
-//     if(element.attaque !== "number"){
-//         alert(`Veuillez introduire un nombre en chiffre`);
-//         element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste} ?`);
-//         alert(`Il reste ${ptAttaque}/500`);
-        
-//     } else if (element.attaque > ptAttaque){
-//         alerte(`nombre de points restants insuffisant`);
-//         element.attaque = prompt(`Distribuez des points d'attaque à ${element.nom}, votre ${element.poste}?`);
-//         alert(`Il reste ${ptAttaque}/500`);
-//     }
-// });
-
-
-if (ptAttaque !== 0) {
-    let ajoutAttaque = prompt(`Il reste ${ptAttaque} points d'attaque. A qui voulez vous les donner: au Guerrier, auMage ou à l'Archer ?`);
-
-    switch(true){
-        case(ajoutAttaque == "Guerrier"):
-            Guerrier.attaque += ptAttaque;
-            break;
-
-        case(ajoutAttaque == "Mage"):
-            Mage.attaque += ptAttaque;
-            break;
-
-        case(ajoutAttaque == "Archer"):
-            Archer.attaque += ptAttaque;
-            break;
-    }
-
-    alert(` Il reste ${ptAttaque} point d'attaque à distribuer`);
-} else {
-    alert (`Débutons maintenant la partie`);
-}
 
 
 
+/*
 
 // Créer un switch entre les trois modes
 // attaque
