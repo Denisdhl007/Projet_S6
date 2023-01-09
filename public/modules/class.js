@@ -49,13 +49,6 @@ export class Héros {
         this.mode = mode;
         this.poste = poste;
     }
-    attaque(){
-
-    }
-    defense(){
-
-    }
-
 }
 
 export class Guerrier extends Héros {
@@ -63,19 +56,19 @@ export class Guerrier extends Héros {
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbPtRage = 0;
     }
-    competence(){
-        this.rage++;
-
-        if (this.nbPtRage == 4) {
-            this.nbPtsAttaque = this.nbPtsAttaque*1.25;
-            this.nbPtRage = 0;
+    defense() {
+        console.log(`${this.nom} se met en défense et il augmente ses points de vie de 250%`);
+        this.pointsDeVie = 2.5;
+        this.pointsDAttaque= 0.5;
+    }
+    attack() {
+        if (this.arrows < 2) {
+            console.log(`Vous n'avez Pas assez de flèches. Votre archer passe son tour.`);
+            this.arrows += 6;
+        } else {
+            this.arrows -= 2;
+            this.health -= this.attack;
         }
-    }
-    attaque(){
-
-    }
-    defense(){
-
     }
 }
 
@@ -84,21 +77,17 @@ export class Archer extends Héros{
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbFleches = 0;
     }
-
-    competence(){
-        this.nbFleches -= 2;
-        this.nbFleche += 1;
-
-        while (this.nbFleche <= 0) {
-            herosArray.splice(herosArray.indexOf(this));
-            this.nbFleches += 6;
+    defense() {
+        console.log(`${this.nom} se met en défense et gagne 1 point de rage`);
+        this.pointDeRage++;
+    }
+    attaque(cible) {
+        if (this.pointDeRage >= 4) {
+            this.pointsDAttaque *= 1.25;
+            this.pointDeRage = 0;
+            console.log(`${this.nom} entre en mode rage et gagne 25% d'attaque supplémentaire pour ce tour`);
         }
-    }
-    attaque(){
-
-    }
-    defense(){
-
+        super.attaque(cible);
     }
 }
 export let nbFlechesArray = [7,8,9,10,11];
@@ -107,25 +96,22 @@ export let nbFlechesArray = [7,8,9,10,11];
 export class Mage extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
-        this.nbMana = 0;
+        this.Mana = 0;
     }
-
-    competence(){
-        this.nbMana -= 2;
-
-        while (this.nbMana <= 0){
-            herosArray.splice(herosArray.indexOf(this));
-            this.nbMana += 7;
+    defense() {
+        this.health -= 0.5 * this.attack;
+    }
+    attaque() {
+    if (this.mana < 2) {
+        console.log("Il n'y a paas assez de mana pour attaquer. Le mage passe son tour.");
+        this.mana += 7;
+    } else {
+        this.mana -= 2;
+        this.health -= this.attack;
         }
     }
-    attaque(){
-
-    }
-    defense(){
-
-    }
 }
-export let nbManaArray = [7,9,11];
+export let ManaArray = [7,9,11];
 export let HérosArray = [`Guerrier`,`Mage`,`Archer`];
 
 /* */

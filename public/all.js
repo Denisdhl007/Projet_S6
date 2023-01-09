@@ -66,7 +66,6 @@ console.log(Archer);
 
 */
 
-
 //Définir les points de vie pour chacun
 
 let vie = Number(`500`);
@@ -101,8 +100,6 @@ console.log(Archer);
 alert (`Passons à la suite`);
 
 
-
-
 //Définir les points d'attaque pour chacun des Héros
 let Attack = 500;
 
@@ -133,9 +130,6 @@ console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 alert (`Passons à la suite`);
-
-
-
 
 
 /*
