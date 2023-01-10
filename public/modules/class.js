@@ -57,18 +57,16 @@ export class Guerrier extends Héros {
         this.nbPtRage = 0;
     }
     defense() {
-        console.log(`${this.nom} se met en défense et il augmente ses points de vie de 250%`);
-        this.nbPtsVie = 2.5;
-        this.nbPtsAttaques= 0.5;
+        console.log(`${this.nom} se met en position de défense et gagne 1 point de rage`);
+        this.pointDeRage++;
     }
-    attack() {
-        if (this.arrows < 2) {
-            console.log(`Vous n'avez Pas assez de flèches. Votre archer passe son tour.`);
-            this.arrows += 6;
-        } else {
-            this.arrows -= 2;
-            this.health -= this.attack;
+    attaque(cible) {
+        if (this.nbPtRage >= 4) {
+            this.nbPtsAttaques *= 1.25;
+            this.nbPtRage = 0;
+            console.log(`${this.nom} entre en rage et gagne 25% d'attaque supplémentaire pour ce tour`);
         }
+        super.attaque(cible);
     }
 }
 
@@ -77,17 +75,20 @@ export class Archer extends Héros{
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
         this.nbFleches = 0;
     }
+
     defense() {
-        console.log(`${this.nom} se met en défense et gagne 1 point de rage`);
-        this.pointDeRage++;
+        console.log(`${this.nom} se met en position de défense et augmente ses points de vie de 250%`);
+        this.nbPtsVie = 2.5;
+        this.nbPtsAttaques= 0.5;
     }
-    attaque(cible) {
-        if (this.pointDeRage >= 4) {
-            this.pointsDAttaque *= 1.25;
-            this.pointDeRage = 0;
-            console.log(`${this.nom} entre en mode rage et gagne 25% d'attaque supplémentaire pour ce tour`);
+    attack() {
+        if (this.arrows < 2) {
+            console.log(`Pas assez de flèches. L'archer passe son tour.`);
+            this.arrows += 6;
+        } else {
+            this.arrows -= 2;
+            this.health -= this.attack;
         }
-        super.attaque(cible);
     }
 }
 export let nbFlechesArray = [7,8,9,10,11];
@@ -96,7 +97,7 @@ export let nbFlechesArray = [7,8,9,10,11];
 export class Mage extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
-        this.Mana = 0;
+        this.mana = 0;
     }
     defense() {
         this.health -= 0.5 * this.attack;
@@ -126,5 +127,4 @@ export class Enigme {
         let ask = prompt(enigmeArray[rand].enigmeQ);
     }
 }
-
 
