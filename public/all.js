@@ -8,6 +8,7 @@ import {BossTab, Sauron, Chronos, Lilith} from "./modules/instances.js";
 import {Mage} from  "./modules/instances.js";
 import {Guerrier} from "./modules/instances.js";
 import {Archer} from "./modules/instances.js";
+import {HerosTab} from "./modules/instances.js";
 // import {nbFlechesArray } from "./modules/class.js";
 // import {nbManaArray} from "./modules/class.js";
 
@@ -119,7 +120,7 @@ while(chosenBoss.nbPtsVie>0 || Guerrier.nbPtsVie>0 && Mage.nbPtsVie>0 && Archer.
 if (Guerrier.nbPtsVie == 0 && Mage.nbPtsVie == 0 && Archer.nbPtsVie == 0){
     alert (`Vous avez perdu contre ${chosenBoss.nom}`);
 }else if (chosenBoss.nbPtsVie == 0){
-    alert (`Vous avez gangé contre ${chosenBoss.nom}`);
+    alert (`Vous avez gagné contre ${chosenBoss.nom}`);
 }
 
 
