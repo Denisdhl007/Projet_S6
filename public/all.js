@@ -7,6 +7,7 @@ alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est com
 alert("Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages.");
 alert("Commençons par renommer vos héros!");
 
+
 // import Héro
 INSTANCE.guerrier1.nom=(prompt(`Comment appelez vous votre Guerrier ?`));
 INSTANCE.mage1.nom=(prompt(`Comment appelez vous votre Mage ?`));
