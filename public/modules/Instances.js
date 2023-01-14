@@ -5,26 +5,25 @@ import * as CLASS from "./class.js";
 export let Sauron = new CLASS.Boss (`Sauron`,1000,20);
 export let Chronos = new CLASS.Boss (`Chronos`,1000,40);
 export let Lilith = new CLASS.Boss (`Lilith`,1000,30);
-console.log(Sauron);
-console.log(Chronos);
-console.log(Lilith);
+// console.log(Sauron);
+// console.log(Chronos);
+// console.log(Lilith);
 
 //choix du boss
 export let tabBoss= [Sauron, Chronos,Lilith];
 export let index = Math.floor(Math.random() * tabBoss.length);
 export let chosenBoss = tabBoss[index];
 
-
 //export Héros
 export let Guerrier = new CLASS.Guerrier ("guerrier", 100, 1000);
 export let Mage = new CLASS.Mage ("mage", 80, 1000);
 export let Archer = new CLASS.Archer ("archer", 50, 5000);
-console.log(Guerrier);
-console.log(Mage);
-console.log(Archer);
+// console.log(Guerrier);
+// console.log(Mage);
+// console.log(Archer);
 
 //export tableau des Héros
-export let HerosTab = [`Guerrier`, `Mage`, `Archer`];
+export let HerosTab = [Guerrier,Mage,Archer];
 
 //export Enigme
 export const enigmas = [

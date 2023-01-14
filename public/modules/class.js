@@ -1,4 +1,4 @@
-import {enigmas,guerrier,mage,archer} from "./instance.js";
+import {enigmas,Guerrier,Mage,Archer} from "./instances.js";
 
 //création de Personnage
 export class Personnage {
@@ -28,13 +28,13 @@ export class Boss extends Personnage {
         alert(`Malgré trois essais, la partie est terminée`);
         
 // reset des points de vie poru une nouvelle partie
-        guerrier.pointsDeVie==0;
-        mage.pointsDeVie==0;
-        archer.pointsDeVie==0;
+        Guerrier.ptVie==0;
+        Mage.ptVie==0;
+        Archer.ptVie==0;
         return false;
     }
     attaqueBoss(){
-        let tab = [guerrier, mage, archer];
+        let tab = [Guerrier, Mage, Archer];
         let randomHero = tab[Math.floor(Math.random() * tab.length)];
         console.log(`${this.nom} attaque ${randomHero.nom} et inflige ${this.ptAttaque} points de dégâts`);
         console.log(`Il reste ${randomHero.ptVie} point de vie à ${randomHero.nom}`);
@@ -71,8 +71,8 @@ export class Guerrier extends Personnage{
         this.ptAttaque*=0.5;
     }
 
-    AttaqueGuerrier(cible){
-        if (this.pteRage == 4) {
+    attaqueGuerrier(cible){
+        if (this.ptRage == 4) {
             cible.ptVie-=this.ptAttaque*1.25;
             this.ptRage=0;
             console.log(`${this.nom} entre en rage et inflige ${this.ptAttaque*1.25} point de dégat à son adversaire`);
@@ -91,13 +91,13 @@ export class Mage extends Personnage {
         super(nom,ptVie,ptAttaque);
         this.mana = [7, 9, 11][Math.floor(Math.random() * 3)];
     }
-    defense() {
+    defenseMage() {
         console.log(`${this.nom} se met en position de défense, il n'attaque pas. ${this.nom} gagne des points de vie et des points d'attaque.`);
         this.ptVie *= 2.5;
         this.ptAttaque*=0.5;
     }
     
-    AttaqueMage(cible) {
+    attaqueMage(cible) {
     if (this.mana < 2) {
         console.log(`${this.nom} n'a pas assez de mana pour attaquer. ${this.nom} passe son tour.`);
         this.mana += 7;
@@ -118,12 +118,12 @@ export class Archer extends Personnage{
         this.arrows = [7, 8, 9, 10, 11][Math.floor(Math.random() * 5)];
     }
 
-    defense() {
+    defenseArcher() {
         console.log(`${this.nom} se met en défense`);
         this.ptVie = 2.5;
         this.ptAttaque= 0.5;
     }
-    AttaqueArcher(cible) {
+    attaqueArcher(cible) {
         if (this.arrows < 2) {
             console.log(`Pas assez de flèches. L'archer passe son tour.`);
             this.arrows += 6;
