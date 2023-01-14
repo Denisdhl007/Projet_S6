@@ -100,8 +100,8 @@ while(INSTANCE.chosenBoss.ptVie>pvMaxBoss*0.2){
     if(INSTANCE.Guerrier.ptVie>0){
         INSTANCE.Guerrier.attaqueGuerrier(INSTANCE.chosenBoss);
     }
-    if(INSTANCE.mage.ptVie>0){
-        INSTANCE.mage.attaqueMage(INSTANCE.chosenBoss);
+    if(INSTANCE.Mage.ptVie>0){
+        INSTANCE.Mage.attaqueMage(INSTANCE.chosenBoss);
     }
     if(INSTANCE.Archer.ptVie<=0 && INSTANCE.Guerrier.ptVie<=0 && INSTANCE.Mage.ptVie<=0){
         alert(`Vous avez perdu contre ${INSTANCE.chosenBoss.nom}`);

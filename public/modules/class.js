@@ -43,8 +43,6 @@ export class Boss extends Personnage {
     }
 }
 
-
-
 // constructor(enigmeQ, enigmeA){
 //     this.enigmeQ = enigmeQ;
 //     this.enigmeA = enigmeA;
