@@ -1,31 +1,38 @@
-// exports boss
-import {Boss} from "./class.js";
-export let Sauron = new Boss (`Sauron`,100,20);
-export let Chronos = new Boss (`Chronos`,100,20);
-export let Lilith = new Boss (`Lilith`,120,30);
-export let BossTab = [Sauron,Chronos,Lilith];
+// import {Boss, Guerrier, Mage, Archer, Enigma}
+import * as CLASS from "./class.js";
+
+// Boss
+export let Sauron = new CLASS.Boss (`Sauron`,1000,20);
+export let Chronos = new CLASS.Boss (`Chronos`,1000,40);
+export let Lilith = new CLASS.Boss (`Lilith`,1000,30);
 console.log(Sauron);
 console.log(Chronos);
 console.log(Lilith);
 
+//choix du boss
+export let tabBoss= [Sauron, Chronos,Lilith];
+export let index = Math.floor(Math.random() * tabBoss.length);
+export let chosenBoss = tabBoss[index];
+
+
 //export Héros
-import {Héros} from "./class.js";
-export let Guerrier = new Héros (`Guerrier`, 100, 100);
-export let Mage = new Héros (`Mage`, 100, 100,);
-export let Archer = new Héros (`Archer`, 100, 100,);
-export let HerosTab = [`Guerrier`, `Mage`, `Archer`];
+export let Guerrier = new CLASS.Guerrier ("guerrier", 100, 1000);
+export let Mage = new CLASS.Mage ("mage", 80, 1000);
+export let Archer = new CLASS.Archer ("archer", 50, 5000);
 console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
+//export tableau des Héros
+export let HerosTab = [`Guerrier`, `Mage`, `Archer`];
 
 //export Enigme
-import {Enigme} from "./class.js";
-export let enigme_a = new Enigme(`Plus elle est grande, moins on la voit. Qui est-elle ?`,`L obscurité`);
-export let enigme_b = new Enigme(`Sitôt que l on me nomme je n existe plus. Qui suis-je ?`, `le silence`);
-export let enigme_c = new Enigme(`Qu'est ce qui est petit, carré et blanc ?`,`un petit carré blanc`);
-export let enigme_d = new Enigme(`J'ai la tête rouge ou rose lorsque je suis parmi mes semblables. Une fois utilisée ma tête est noire. Qui suis-je ?`, `Une allumette`);
-export let enigme_e = new Enigme(`J'apparais au début de la nuit et à la fin du matin. On me retrouve également deux fois dans une année. Qui suis-je ?`, `la lettre n`);
-export let enigme_f = new Enigme(`Sans moi "Paris" serait "pris". Qui suis je ?`, `la lettre a`);
-export let enigme_g = new Enigme(`Je suis à l'abri et cependant toujours humide. Qui suis je ?`, `la langue`);
-export let enigmeArray = [enigme_a,enigme_b,enigme_c,enigme_d,enigme_e,enigme_f,enigme_g];
+export const enigmas = [
+    new CLASS.Enigma(`Plus elle est grande, moins on la voit. Qui est-elle ?`,`L obscurité`),
+    new CLASS.Enigma(`Sitôt que l on me nomme je n existe plus. Qui suis-je ?`, `le silence`),
+    new CLASS.Enigma(`Qu'est ce qui est petit, carré et blanc ?`,`un petit carré blanc`),
+    new CLASS.Enigma(`J'ai la tête rouge ou rose lorsque je suis parmi mes semblables. Une fois utilisée ma tête est noire. Qui suis-je ?`, `Une allumette`),
+    new CLASS.Enigma(`J'apparais au début de la nuit et à la fin du matin. On me retrouve également deux fois dans une année. Qui suis-je ?`, `la lettre n`),
+    new CLASS.Enigma(`Sans moi "Paris" serait "pris". Qui suis je ?`, `la lettre a`),
+    new CLASS.Enigma(`Je suis à l'abri et cependant toujours humide. Qui suis je ?`, `la langue`)
+];

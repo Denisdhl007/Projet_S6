@@ -1,265 +1,116 @@
 // import Boss
-import {Boss} from "./modules/class.js";
-import {BossTab, Sauron, Chronos, Lilith} from "./modules/instances.js";
-
-// import Héro
-// import {Héros} from "./modules/instances.js";
-import {Mage} from  "./modules/instances.js";
-import {Guerrier} from "./modules/instances.js";
-import {Archer} from "./modules/instances.js";
-import {HerosTab} from "./modules/instances.js";
-// import {nbFlechesArray } from "./modules/class.js";
-// import {nbManaArray} from "./modules/class.js";
+import * as INSTANCE from "./module/instance.js";
 
 
-// import Enigme
-// import {Enigme} from "./modules/instances.js";
-import {enigme_a} from "./modules/instances.js";
-import {enigme_b} from "./modules/instances.js";
-import {enigme_c} from "./modules/instances.js";
-import {enigme_d} from "./modules/instances.js";
-import {enigme_e} from "./modules/instances.js";
-import {enigme_f} from "./modules/instances.js";
-import {enigme_g} from "./modules/instances.js";
-
-// import {} from "./modules/Instances.js";
 
 //initialisation de partie
 
-
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
+alert("Vous avez un boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages.");
+alert("Commençons par renommer vos héros!");
 
-//Nommer les héros
-alert(`Un guerrier, un mage et un archer vont se battre contre le Boss. Vous allez maintenant nommer les trois héros`);
-
-Guerrier.nom = prompt("Quel est le nom de ton guerrier ?");
-Mage.nom = prompt("Quel est le nom de ton mage ?");
-Archer.nom = prompt("Quel est le nom de ton archer?");
+// import Héro
+INSTANCE.Guerrier.nom=(prompt(`Comment applez vous votre Guerrier ?`));
+INSTANCE.Mage.nom=(prompt(`Comment applez vous votre Mage ?`));
+INSTANCE.Archer.nom=(prompt(`Comment applez vous votre Archer ?`));
 console.log(Guerrier);
 console.log(Mage);
 console.log(Archer);
 
+// Point de vie à attribuer auxhéros.
+let vie = 500;
 
-//Définir les points de vie pour chacun
 
-let vie = Number(`500`);
-
-alert (`Votre Guérrier s'appelle: ${Guerrier.nom}, Votre Mage s'appelle: ${Mage.nom} et Votre Archer s'appelle: ${Archer.nom}Donnez leur maintenant des points d'attaque.`);
+alert (`Votre Guérrier s'appelle: ${INSTANCE.Guerrier.nom}, Votre Mage s'appelle: ${INSTANCE.Mage.nom} et Votre Archer s'appelle: ${INSTANCE.Archer.nom}Donnez leur maintenant des points d'attaque.`);
 
 //Guerrier
-Guerrier.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre guerrier (entre 0 et 500?)`);
-while (vie<=Guerrier.nbPtsVie && Guerrier.nbPtsVie>0) {
+INSTANCE.Guerrier.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre guerrier (entre 0 et 500?)`);
+while (vie<=INSTANCE.Guerrier.ptVie && INSTANCE.Guerrier.ptVie>0) {
     alert(`Veuillez ré-attribuer un nombre entre 0 et ${vie}`);
-    Guerrier.nbPtsVie = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+    INSTANCE.Guerrier.ptVie = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
 }
-vie-=Guerrier.nbPtsVie;
+vie-=INSTANCE.Guerrier.ptVie;
 alert(`Il vous reste ${vie}`);
-console.log(Guerrier);
+console.log(INSTANCE.Guerrier);
 
 //Mage
-Mage.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
-while (vie<=Mage.nbPtsVie && Mage.nbPtsVie>0) {
+INSTANCE.Mage.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
+while (vie<=INSTANCE.Mage.ptVie && INSTANCE.Mage.ptVie>0) {
     alert(`Veuillez ré-attribuer un nombre entre 0 et ${vie}`);
-    Mage.nbPtsVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
+    INSTANCE.Mage.ptVie = prompt(`Combien souhaitez vous attribuer à votre Mage`);
 }
-vie-=Mage.nbPtsVie;
-console.log(Mage);
+vie-=INSTANCE.Mage.ptVie;
+console.log(INSTANCE.Mage);
 
 //Archer
-Archer.nbPtsVie = vie;
+INSTANCE.Archer.ptVie = vie;
 alert(`votre Archer a donc ${vie} point de vie`);
 
-console.log(Guerrier);
-console.log(Mage);
-console.log(Archer);
+console.log(INSTANCE.Guerrier);
+console.log(INSTANCE.Mage);
+console.log(INSTANCE.Archer);
 alert (`Passons à la suite`);
 
-
-
 //Définir les points d'attaque pour chacun des Héros
-let Attack = Number(`200`);
+let Attack = Number(`500`);
 
 //Guerrier
-Guerrier.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre guerrier?`);
-while (Attack<=Guerrier.nbPtsAttaques && Guerrier.nbPtsAttaques>0) {
+INSTANCE.Guerrier.ptAttaque = prompt(`Combien souhaitez vous attribuer à votre guerrier?`);
+while (Attack<=INSTANCE.Guerrier.ptAttaque && INSTANCE.Guerrier.ptAttaque>0) {
     alert(`Veuillez ré-attribuer un nombre entre 0 et ${Attack}`);
-    Guerrier.nbPtsAttaques = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
+    Guerrier.ptAttaque = prompt("Combien souhaitez vous attribuer à votre guerrier ?");
 }
-vie-=Guerrier.nbPtsAttaques;
+vie-=INSTANCE.Guerrier.ptAttaque;
 alert(`Il vous reste ${Attack} points d'attaque`);
 console.log(Guerrier);
 
 //Mage
-Mage.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
-while (Attack<=Mage.nbPtsAttaques && Mage.nbPtsAttaques>0) {
+Mage.ptAttaque = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
+while (Attack<=Mage.ptAttaque && Mage.ptAttaque>0) {
     alert(`Veuillez ré-attribuer un nombre entre 0 et ${Attack}`);
-    Mage.nbPtsAttaques = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
+    Mage.ptAttaque = prompt(`Combien souhaitez vous attribuer à votre Mage?`);
 }
-Attack-=Mage.nbPtsAttaques;
+Attack-=Mage.ptAttaque;
 console.log(Mage);
 
 //Archer
-Archer.nbPtsAttaques = vie;
+INSTANCE.Archer.ptAttaque = vie;
 alert(`votre Archer a donc ${Attack} points d'attaque`);
 
-console.log(Guerrier);
-console.log(Mage);
-console.log(Archer);
+console.log(INSTANCE.Guerrier);
+console.log(INSTANCE.Mage);
+console.log(INSTANCE.Archer);
 
 alert (`Passons à la suite`);
 
 // choix de boss
-alert(`Un Boss va maintenant être choisi aléatoirement parmi ${Sauron.nom}, ${Chronos.nom}, ${Lilith.nom}`);
-let index = Math.floor(Math.random() * BossTab.length);
-let chosenBoss = BossTab[index];
-console.log(chosenBoss);
-alert(`le Boss est ${chosenBoss.nom}`);
+alert(`Un Boss va maintenant être choisi aléatoirement parmi ${INSTANCE.Sauron.nom}, ${INSTANCE.Chronos.nom}, ${INSTANCE.Lilith.nom}`);
+alert(`le boss est ${INSTANCE.chosenBoss.nom}`);
 
-
+let pvMaxBoss= INSTANCE.chosenBoss.ptVie;
 
 //début d'une partie
 
 
-    // le guerrier joue selon une position à demander au joueur.Archer
-
-    // le Mage joue selon une position à demander au joueur.
-    
-    // l'archer joue selon une position à demander au joueur.
-
-    // Le boss joue son tour en position déjà définie
-
-let i = 0;
-
-// FAUT IL METTRE LES HEORS EN ARRAY?
-
-do{
-    i++;
-
-    alert(`commencons le tour numéro ${i} de la partie! Elle se terminera lorsque soit le Boss est mort, soit vos trois héros sont morts `);
-
-    let posture = prompt(`Choisissez une posture pour ${Guerrier.nom} votre guerrier : attaque ou défense`);
-
-    if (posture == defense){
-    Guerrier.defense
-    console.log(`${Guerrier.nom} attacked the ${selectedBoss} with extra damage!`);
-
-    } else if (posture == attaque){
-    Guerrier.attaque(chosenBoss);
-    console.log(`${Guerrier.nom} did not attack the ${selectedBoss}.`);
-
-    } else if (posture !== "attaque" && posture !== "défense"){
-        posture = prompt(`Entrez une posture valide : attaque ou défense`)
+while(INSTANCE.chosenBoss.ptVie>pvMaxBoss*0.2){
+    if(INSTANCE.Archer.ptVie>0){
+        INSTANCE.Archer.attaqueArcher(INSTANCE.chosenBoss);
+        console.log();
     }
-
-    
-
-//     prompt: quelle posture voulez vous appliquer à votre Mage?
-//     Mage.attaque(chosenBoss);
-
-//     prompt: quelle posture voulez vous appliquer à votre Archer?
-//     Archer.attaque(chosenBoss);
-
-
-  // chosenBoss.attaque() aléatoirement un des trois héros.
-        let bossAttack = () => {
-        let heroToAttack = HerosTab[Math.floor(Math.random() * HerosTab.length)];
-        console.log(`${selectedBoss} attacked ${heroToAttack}.`);
-    };
-};
-
-// La boucle avec l'énégime devrait elle venir se placer ici plutot que dans la classe?????
-
-
-
-switch (true) {
-    case chosenBoss.nbPtsVie <= 0:
-        alert (`Vous avez gagné contre ${chosenBoss.nom}`);
-    case Guerrier.nbPtsVie <= 0  && Mage.nbPtsVie <= 0 && Archer.nbPtsVie <= 0:
-        alert(`Vous avez perdu la bataillecontre ${chosenBoss.nom}, tous vos héros sont morts !`);
+    if(INSTANCE.Guerrier.ptVie>0){
+        INSTANCE.Guerrier.attaqueGuerrier(INSTANCE.chosenBoss);
+    }
+    if(INSTANCE.mage.ptVie>0){
+        INSTANCE.mage.attaqueMage(INSTANCE.chosenBoss);
+    }
+    if(INSTANCE.Archer.ptVie<=0 && INSTANCE.Guerrier.ptVie<=0 && INSTANCE.Mage.ptVie<=0){
+        alert(`Vous avez perdu contre ${INSTANCE.chosenBoss.nom}`);
+        break;
+    }
+    INSTANCE.chosenBoss.attaqueBoss();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Possibility:
-
-
-// // array of boss names
-// const bosses = ["boss1", "boss2", "boss3"];
-
-// // randomly select a boss
-// const selectedBoss = bosses[Math.floor(Math.random() * bosses.length)];
-
-// // array of hero names
-// const heroes = ["hero1", "hero2", "hero3"];
-
-// // object to store heroes' posture
-// const heroesPosture = {
-//   hero1: "normal",
-//   hero2: "normal",
-//   hero3: "normal"
-// };
-
-// // function to set heroes' posture
-// const setPosture = (hero, posture) => {
-//   if (heroesPosture.hasOwnProperty(hero) && (posture === "attack" || posture === "defense" || posture === "normal")) {
-//     heroesPosture[hero] = posture;
-//   }
-// };
-
-// // function to perform heroes' attack on boss
-
-
-// const heroesAttack = () => {
-//   heroes.forEach(hero => {
-//     if (heroesPosture[hero] === "attack") {
-//       console.log(`${hero} attacked the ${selectedBoss} with extra damage!`);
-//     } else if (heroesPosture[hero] === "defense") {
-//       console.log(`${hero} attacked the ${selectedBoss} with reduced damage.`);
-//     } else {
-//       console.log(`${hero} attacked the ${selectedBoss}.`);
-//     }
-//   });
-// };
-
-
-// // function to perform boss' attack on heroes
-// const bossAttack = () => {
-//   const heroToAttack = heroes[Math.floor(Math.random() * heroes.length)];
-//   console.log(`${selectedBoss} attacked ${heroToAttack}.`);
-// };
-
-// // example usage
-// setPosture("hero1", "attack");
-// setPosture("hero2", "defense");
-// heroesAttack();
-// bossAttack();
-
-
-
+if(INSTANCE.Archer.ptVie<=0 && INSTANCE.Guerrier.ptVie<=0 && INSTANCE.Mage.ptVie<=0){
+    alert(`Vous avez perdu contre ${INSTANCE.chosenBoss.nom}`);
+}else{
+INSTANCE.chosenBoss.enigma();
+}
