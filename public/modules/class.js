@@ -6,14 +6,11 @@ export class Boss {
     }
     Duel(Héros, Enigme){
         if (this.nbPtsvie <= (this.nbPtsvie*0,2)){ 
-            // je ne vois pas comment ni où le nombre de point de vie va diminuer pour l'instant. il faut comparer le nombre de point de vie produit par le jeu et le nombre de point de vie initial et évaluer si le nouveau point de vie est <= à 20% du nombre de point de vie initial.
             let i = 0;
         
             do {
                 i++;
-        
-                Enigme.enigmeQ();
-        
+                Enigme.enigmeQ();    
             } while (i = 7 || ask == enigmeArray[rand].enigmeA);
         
             switch (true){
@@ -30,10 +27,10 @@ export class Boss {
         }
     }
     attaque(){
-        let tab = [Guerrier, Mage, Archer];
+        // let HerosTab = [Guerrier, Mage, Archer];
         let randomItem = tab[Math.floor(Math.random() * tab.length)];
-        console.log(`${this.nom} attaque ${randomItem.nom} et inflige ${this.pointsDAttaque} points de dégâts`);
-        randomItem.pointsDeVie -= this.pointsDAttaque;
+        console.log(`${this.nom} attaque ${randomItem.nom} et inflige ${this.nbPtsVie} points de dégâts de vie`);
+        randomItem.nbPtsVie -= this.nbPtsAttaques;
     }
 }
 
@@ -50,7 +47,6 @@ export class Héros {
         this.poste = poste;
     }
 }
-
 export class Guerrier extends Héros {
     constructor(nom,nbPtsVie,nbPtsAttaques,poste,mode){
         super(nom,nbPtsVie,nbPtsAttaques,poste,mode);
@@ -113,11 +109,11 @@ export class Mage extends Héros {
     }
 }
 export let ManaArray = [7,9,11];
-export let HérosArray = [`Guerrier`,`Mage`,`Archer`];
+export let HerosTab = [`Guerrier`,`Mage`,`Archer`];
 
 /* */
 
-export class Enigme {
+
     constructor(enigmeQ, enigmeA){
         this.enigmeQ = enigmeQ;
         this.enigmeA = enigmeA;
