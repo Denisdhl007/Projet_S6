@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(116, 227, 116);
+    font: 15px Arial, sans-serif;
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.div1_1 h2:nth-of-type(1){
+    color: rgb(21, 19, 152);
+}
+
+.div1_2 h2:nth-of-type(1){
+    color: rgb(173, 16, 121);
+}
+
+.div1_3 h2:nth-of-type(1){
+    color: rgb(150, 6, 179);
+}
+
+.div2{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.div2_1{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.div2_2{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.div2_3{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#questionnaire2_1{
+    margin: 10px;
+}
+
+#questionnaire2_2{
+    margin: 10px;
+}
+
+#questionnaire2_3{
+    margin: 10px;
+}

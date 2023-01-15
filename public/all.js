@@ -1,14 +1,78 @@
-// import Boss
-import * as INSTANCE from "./modules/instances.js";
+// //initialisation de partie
 
-//initialisation de partie
+// const originalText = document.getElementById("originalText");
+// function changeText() {
+//     originalText.innerHTML = "Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros";
+// }
+// setTimeout(changeText, 2000);
+
+
+// const originalText1 = document.getElementById("originalText1");
+// function changeText1() {
+//     originalText.innerHTML = "Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages";
+// }
+// setTimeout(changeText1, 8000);
+
+// const originalText2 = document.getElementById("originalText2");
+// function changeText2() {
+//     originalText.innerHTML = "Commençons par renommer vos héros!";
+// }
+// setTimeout(changeText2, 13000);
 
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 alert("Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages.");
 alert("Commençons par renommer vos héros!");
 
 
-// import Héro
+
+
+
+// // import Instances
+import * as INSTANCE from "./modules/instances.js";
+
+
+// setTimeout(function(){
+//     document.getElementById("div2_1").style.visibility = "visible";
+//   }, 15000);
+
+// const questionnaire1_1 = document.getElementById("questionnaire1_1");
+// function questionnaire1() {
+//     questionnaire1_1.innerHTML = "Comment appelez vous votre Guerrier ?";
+// }
+// setTimeout(questionnaire1, 15000);
+
+// let submitButton = document.getElementById("mySubmit");
+// let inputValue = document.getElementById("questionnaire2_1").value;
+
+// submitButton.addEventListener("click", function() {
+//   console.log(inputValue);
+//   alert(inputValue);
+// });
+
+
+// setTimeout(function(){
+//     document.getElementById("div2_2").style.visibility = "visible";
+//   }, 18000);
+
+// const questionnaire1_2 = document.getElementById("questionnaire1_2");
+// function questionnaire2() {
+//     questionnaire1_2.innerHTML = "Comment appelez vous votre Mage ?";
+// }
+// setTimeout(questionnaire2, 18000);
+
+
+// setTimeout(function(){
+//     document.getElementById("div2_3").style.visibility = "visible";
+//   }, 21000);
+
+// const questionnaire1_3 = document.getElementById("questionnaire1_3");
+// function questionnaire3() {
+//     questionnaire1_3.innerHTML = "Comment appelez vous votre Archer ?";
+// }
+// setTimeout(questionnaire3, 21000);
+
+
+// // import Héro
 INSTANCE.guerrier1.nom=(prompt(`Comment appelez vous votre Guerrier ?`));
 INSTANCE.mage1.nom=(prompt(`Comment appelez vous votre Mage ?`));
 INSTANCE.archer1.nom=(prompt(`Comment appelez vous votre Archer ?`));
@@ -17,7 +81,7 @@ console.log(INSTANCE.mage1);
 console.log(INSTANCE.archer1);
 
 // Point de vie à attribuer auxhéros.
-let vie = 500;
+let vie = Number(`500`);
 
 alert (`Votre Guérrier s'appelle: ${INSTANCE.guerrier1.nom}, Votre Mage s'appelle: ${INSTANCE.mage1.nom} et Votre Archer s'appelle: ${INSTANCE.archer1.nom}Donnez leur maintenant des points d'attaque.`);
 
