@@ -1,4 +1,8 @@
-// //initialisation de partie
+//initialisation de partie
+
+// import { guerrier1 } from "./modules/Instances";
+
+
 
 // const originalText = document.getElementById("originalText");
 // function changeText() {
@@ -25,9 +29,7 @@ alert("Commençons par renommer vos héros!");
 
 
 
-
-
-// // import Instances
+// import Instances
 import * as INSTANCE from "./modules/instances.js";
 
 
@@ -41,13 +43,32 @@ import * as INSTANCE from "./modules/instances.js";
 // }
 // setTimeout(questionnaire1, 15000);
 
-// let submitButton = document.getElementById("mySubmit");
-// let inputValue = document.getElementById("questionnaire2_1").value;
+/*
+let submitButton = document.getElementById("mySubmit");
+let inputValue = document.getElementById("questionnaire2_1").value;
 
-// submitButton.addEventListener("click", function() {
-//   console.log(inputValue);
-//   alert(inputValue);
-// });
+submitButton.addEventListener("click", function() {
+  console.log(inputValue);
+  alert(inputValue);
+});
+
+*/
+
+// let val;
+// function obtenirElement () {    
+//     val=document.getElementById("questionnaire2_1").value;
+// console.log(val);
+// alert(val);
+// }
+
+// document.getElementById("btn11").addEventListener("click", obtenirElement);
+
+
+/**/
+
+// guerrier1.nom = val
+
+/**/
 
 
 // setTimeout(function(){
@@ -70,6 +91,9 @@ import * as INSTANCE from "./modules/instances.js";
 //     questionnaire1_3.innerHTML = "Comment appelez vous votre Archer ?";
 // }
 // setTimeout(questionnaire3, 21000);
+
+
+
 
 
 // // import Héro
