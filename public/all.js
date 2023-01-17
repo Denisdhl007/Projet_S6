@@ -1,37 +1,39 @@
-//initialisation de partie
+// initialisation de partie
 
-// import { guerrier1 } from "./modules/Instances";
-
-
-
-// const originalText = document.getElementById("originalText");
-// function changeText() {
-//     originalText.innerHTML = "Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros";
-// }
-// setTimeout(changeText, 2000);
+// // import { guerrier1 } from "./modules/Instances.js";
 
 
-// const originalText1 = document.getElementById("originalText1");
-// function changeText1() {
-//     originalText.innerHTML = "Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages";
-// }
-// setTimeout(changeText1, 8000);
+// // const originalText = document.getElementById("originalText");
+// // function changeText() {
+// //     originalText.innerHTML = "Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros";
+// // }
+// // setTimeout(changeText, 2000);
 
-// const originalText2 = document.getElementById("originalText2");
-// function changeText2() {
-//     originalText.innerHTML = "Commençons par renommer vos héros!";
-// }
-// setTimeout(changeText2, 13000);
+
+// // const originalText1 = document.getElementById("originalText1");
+// // function changeText1() {
+// //     originalText.innerHTML = "Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages";
+// // }
+// // setTimeout(changeText1, 8000);
+
+// // const originalText2 = document.getElementById("originalText2");
+// // function changeText2() {
+// //     originalText.innerHTML = "Commençons par renommer vos héros!";
+// // }
+// // setTimeout(changeText2, 13000);
+
+
+
+
+
 
 alert(`Bienvenue dans cette partie de Geek of Legends. Une partie de jeu est composée d'un Boss et de TROIS héros.`);
 alert("Vous avez un Boss à défier aléatoirement. Chaque tour, le boss attaque aléatoirement un de vos personnages.");
 alert("Commençons par renommer vos héros!");
 
 
-
 // import Instances
 import * as INSTANCE from "./modules/instances.js";
-
 
 // setTimeout(function(){
 //     document.getElementById("div2_1").style.visibility = "visible";
@@ -43,25 +45,13 @@ import * as INSTANCE from "./modules/instances.js";
 // }
 // setTimeout(questionnaire1, 15000);
 
-/*
-let submitButton = document.getElementById("mySubmit");
-let inputValue = document.getElementById("questionnaire2_1").value;
 
-submitButton.addEventListener("click", function() {
-  console.log(inputValue);
-  alert(inputValue);
-});
-
-*/
-
-// let val;
-// function obtenirElement () {    
-//     val=document.getElementById("questionnaire2_1").value;
-// console.log(val);
-// alert(val);
-// }
-
-// document.getElementById("btn11").addEventListener("click", obtenirElement);
+// let submitButton = document.getElementById("mySubmit");
+// submitButton.addEventListener("click", function() {
+//     let inputValue = document.getElementById("questionnaire2_1").value;
+//     console.log(inputValue);
+//     alert(inputValue);
+// });
 
 
 /**/
@@ -85,6 +75,7 @@ submitButton.addEventListener("click", function() {
 // setTimeout(function(){
 //     document.getElementById("div2_3").style.visibility = "visible";
 //   }, 21000);
+
 
 // const questionnaire1_3 = document.getElementById("questionnaire1_3");
 // function questionnaire3() {
