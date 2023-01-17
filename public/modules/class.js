@@ -33,9 +33,9 @@ export class boss extends personnage {
         alert(`Malgré trois essais, la partie est terminée`);
         
 // reset des points de vie pour une nouvelle partie
-        guerrier.ptVie==0;
-        mage.ptVie==0;
-        archer.ptVie==0;
+        guerrier.ptVie=0;
+        mage.ptVie=0;
+        archer.ptVie=0;
         return false;
     }
     attaqueBoss(){
